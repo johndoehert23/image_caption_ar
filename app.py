@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-#from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 
 
 # Sidebar - Model Selection
@@ -8,7 +8,7 @@ st.sidebar.header('Choose your model')
 model_name = st.sidebar.selectbox('Model selection', ['inceptionGRU.h5', 'inceptionLSTM.h5'])
 
 # Load model
-#model = load_model(model_name)
+model = load_model(model_name)
 
 # Main - Image Upload and Captioning
 st.header('Image Captioning App')
